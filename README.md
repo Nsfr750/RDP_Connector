@@ -14,3 +14,10 @@ sudo apt-get install freerdp2-x11
 ```
 python3 rdp.py
 ```
+
+## Social Links
+
+- [GitHub](https://github.com/Nsfr750)
+- [Patreon](https://www.patreon.com/Nsfr750)
+- [Discord](https://discord.gg/BvvkUEP9)
+- [Paypal](https://paypal.me/3dmega)
