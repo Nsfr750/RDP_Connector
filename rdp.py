@@ -38,9 +38,20 @@ class Sponsor:
 class RDPApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("RDP Connection App")
+        self.root.title("RDP 1.0")
 
+        self.create_menu()
         self.create_widgets()
+
+    def create_menu(self):
+        menubar = tk.Menu(self.root)
+        helpmenu = tk.Menu(menubar, tearoff=0)
+        helpmenu.add_command(label="About", command=self.show_about)
+        menubar.add_cascade(label="Help", menu=helpmenu)
+        self.root.config(menu=menubar)
+
+    def show_about(self):
+        messagebox.showinfo("About", "RDP 1.0\nBy Nsfr750\nConnect to RDP sessions easily.")
 
     def create_widgets(self):
         tk.Label(self.root, text="RDP Connection Details").grid(row=0, column=0, columnspan=2)
