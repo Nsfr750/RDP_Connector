@@ -4,36 +4,39 @@ import subprocess
 
 class Sponsor:
     
-    root = Tk()
-    root.geometry("300x200")
-    root.title("Sponsor")
+    def __init__(self):
+        self.root = Tk()
+        self.root.geometry("300x200")
+        self.root.title("Sponsor")
+        self.setup_gui()
 
-    title_label = Label(root, text="Socials", font=("Arial", 16))
-    title_label.pack(pady=10)
+    def setup_gui(self):
+        self.title_label = Label(self.root, text="Socials", font=("Arial", 16))
+        self.title_label.pack(pady=10)
 
-    def open_patreon():
+        self.patreon_button = Button(self.root, text="Join the Patreon!", command=self.open_patreon)
+        self.patreon_button.pack(pady=10)
+
+        self.github_button = Button(self.root, text="GitHub", command=self.open_github)
+        self.github_button.pack(pady=10)
+
+        self.discord_button = Button(self.root, text="Discord", command=self.open_discord)
+        self.discord_button.pack(pady=10)
+
+    def open_patreon(self):
         import webbrowser
         webbrowser.open("https://www.patreon.com/Nsfr750")
 
-    def open_github():
+    def open_github(self):
         import webbrowser
         webbrowser.open("https://github.com/sponsors/Nsfr750")
 
-    def open_discord():    
+    def open_discord(self):    
         import webbrowser
         webbrowser.open("https://discord.gg/q5Pcgrju")
-        
-    # Create and place buttons
-    patreon_button = Button(root, text="Join the Patreon!", command=open_patreon)
-    patreon_button.pack(pady=10)
 
-    github_button = Button(root, text="GitHub", command=open_github)
-    github_button.pack(pady=10)
-
-    discord_button = Button(root, text="Discord", command=open_discord)
-    discord_button.pack(pady=10)
-
-    root.mainloop()
+    def run(self):
+        self.root.mainloop()
 
 class RDPApp:
     def __init__(self, root):
