@@ -15,11 +15,38 @@ pip install -r requirements.txt
 
 ## Instructions to Run the Application
 
+### On Linux
+
 Ensure xfreerdp is installed on your Linux machine. You can install it using:
 
 ```
-sudo apt-get install freerdp2-x11
+sudo apt-get install xfreerdp
 ```
+
+### On Windows
+
+1. Make sure Python 3.x is installed on your system.
+2. Install the required dependencies by running:
+
+```
+pip install -r requirements.txt
+```
+
+3. Run the application:
+
+```
+python rdp.py
+```
+
+### On Linux
+
+Ensure xfreerdp is installed on your Linux machine. You can install it using:
+
+```
+sudo apt-get install xfreerdp
+```
+
+sudo apt-get install freerdp2-x11
 
 Run the Python script using:
 
